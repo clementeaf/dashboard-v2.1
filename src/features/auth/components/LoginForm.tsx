@@ -4,6 +4,7 @@ import { LoginActions } from './LoginActions';
 import { useUserStore } from '@/store/userStore';
 import { useRouter } from 'next/navigation';
 import { Input, Checkbox, Card, IconAvatar } from '@/components/ui';
+import { GoogleLoginButton } from './GoogleLoginButton';
 
 export const LoginForm: React.FC = () => {
   const setUser = useUserStore((state) => state.setUser);
@@ -71,6 +72,12 @@ export const LoginForm: React.FC = () => {
         <div className="mt-2">
           <LoginActions />
         </div>
+        <div className="flex items-center gap-2 text-slate-400 text-xs mb-2">
+          <div className="flex-1 border-t border-slate-700" />
+          <span className="mx-2 text-slate-400">o continúa con</span>
+          <div className="flex-1 border-t border-slate-700" />
+        </div>
+        <GoogleLoginButton onClick={() => { /* lógica futura de Google OAuth */ }} />
       </form>
     </Card>
   );
