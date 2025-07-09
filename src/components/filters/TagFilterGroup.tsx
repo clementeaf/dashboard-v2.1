@@ -8,7 +8,7 @@ export interface TagFilterGroupProps {
 }
 
 export const TagFilterGroup: React.FC<TagFilterGroupProps> = ({ tags, onChange, className = '' }) => (
-  <div className={`flex flex-wrap gap-2 ${className}`}>
+  <div className={`flex flex-row flex-wrap gap-3 items-start ${className}`} style={{ justifyContent: 'flex-start' }}>
     {tags.map((tag, idx) => (
       <TagFilterItem
         key={tag.label}

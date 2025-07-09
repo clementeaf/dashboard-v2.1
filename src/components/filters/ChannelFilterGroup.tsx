@@ -8,7 +8,7 @@ export interface ChannelFilterGroupProps {
 }
 
 export const ChannelFilterGroup: React.FC<ChannelFilterGroupProps> = ({ channels, onChange, className = '' }) => (
-  <div className={`flex flex-wrap gap-2 ${className}`}>
+  <div className={`flex flex-row flex-wrap gap-3 items-start ${className}`} style={{ justifyContent: 'flex-start' }}>
     {channels.map((channel, idx) => (
       <ChannelFilterItem
         key={channel.label}
