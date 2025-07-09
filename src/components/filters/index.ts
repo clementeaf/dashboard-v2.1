@@ -1,4 +1,1 @@
-export { ChannelFilterItem } from './ChannelFilterItem';
-export { ChannelFilterGroup } from './ChannelFilterGroup';
-export { TagFilterItem } from './TagFilterItem';
-export { TagFilterGroup } from './TagFilterGroup'; 
+export { default as ConversationsFilters } from './ConversationsFilters'; 
